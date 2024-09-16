@@ -854,10 +854,13 @@ It should stick out from any other faces currently displayed."
                                             :foreground ,lambda-fg
                                             :height 1.1))))
      `(tab-bar-tab-inactive       ((,class (:background ,lambda-lowlight :foreground ,lambda-meek))))
-     `(tab-line                   ((,class (:inherit default))))
      `(tab-bar-tab-ungrouped      ((,class (:background ,lambda-bg :foreground ,lambda-faint))))
      `(tab-bar-tab-group-current  ((,class (:background ,lambda-bg :foreground ,lambda-fg :underline t))))
      `(tab-bar-tab-group-inactive ((,class (:background ,lambda-bg :foreground ,lambda-faint))))
+
+     `(tab-line                   ((,class (:inherit tab-bar))))
+     `(tab-line-tab               ((,class (:inherit tab-bar-tab-inactive))))
+     `(tab-line-tab-current       ((,class (:inherit tab-bar-tab))))
 
      ;; `(tab-bar                    ((,class (:background ,lambda-bg :foreground ,lambda-meek :inherit ,(if lambda-themes-set-variable-pitch 'variable-pitch 'default)))))
      ;; `(tab-bar-tab                ((,class (:background ,lambda-ultralight :foreground ,lambda-fg :underline (:color ,lambda-mild) :height 1.1))))
