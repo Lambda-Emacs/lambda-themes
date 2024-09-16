@@ -213,7 +213,7 @@ It should stick out from any other faces currently displayed."
      `(show-paren-match     ((,class (:background ,lambda-ultralight :foreground ,lambda-crucial :weight bold))))
      `(show-paren-mismatch  ((,class (:background ,lambda-ultralight :foreground ,lambda-urgent :weight bold :box t))))
      `(link                 ((,class (:background ,lambda-lowlight :foreground ,lambda-strong :underline t))))
-     `(shadow               ((,class (:foreground ,lambda-ultralight))))
+     `(shadow               ((,class (:foreground ,lambda-meek :weight light))))
 
      ;; NOTE: We want the lambda-themes- colors to be available as faces. It seems like there
      ;; should be a better way to do this but...
