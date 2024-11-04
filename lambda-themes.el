@@ -221,7 +221,7 @@ It should stick out from any other faces currently displayed."
      `(lambda-bg          ((,class (:background ,lambda-bg))))
      `(lambda-ultralight  ((,class (:background ,lambda-ultralight))))
      `(lambda-highlight   ((,class (:foreground ,lambda-highlight))))
-     `(lambda-lowlight    ((,class (:foreground ,lambda-lowlight))))
+     `(lambda-lowlight    ((,class (:background ,lambda-lowlight))))
      `(lambda-urgent      ((,class (:foreground ,lambda-urgent))))
      `(lambda-focus       ((,class (:foreground ,lambda-focus))))
      `(lambda-strong      ((,class (:foreground ,lambda-strong :weight semi-bold))))
@@ -247,7 +247,7 @@ It should stick out from any other faces currently displayed."
      `(escape-glyph         ((,class (:foreground ,lambda-aqua))))
      `(highlight            ((,class (:background ,lambda-highlight))))
      `(homoglyph            ((,class (:foreground ,lambda-focus))))
-     `(match                ((,class (:foreground ,lambda-lowlight :background ,lambda-focus))))
+     `(match                ((,class (:background ,lambda-lowlight :background ,lambda-focus))))
 
 ;;;;; Built-in syntax (Font-Lock)
      `(font-lock-builtin-face        ((,class ,(if lambda-themes-set-vibrant `(:foreground ,lambda-purple :weight normal) `(:foreground ,lambda-fg :weight light)))))
@@ -432,16 +432,25 @@ It should stick out from any other faces currently displayed."
      `(js2-warning                               ((,class (:underline (:color ,lambda-yellow :style wave)))))
      `(js2-error                                 ((,class (:underline (:color ,lambda-red :style wave)))))
      `(js2-external-variable                     ((,class (:underline (:color ,lambda-aqua :style wave)))))
-     `(js2-jsdoc-tag                             ((,class (:background unspecified :foreground ,lambda-lowlight))))
-     `(js2-jsdoc-type                            ((,class (:background unspecified :foreground ,lambda-highlight))))
-     `(js2-jsdoc-value                           ((,class (:background unspecified :foreground ,lambda-lowlight))))
+     `(js2-jsdoc-tag                             ((,class (:background ,lambda-lowlight))))
+     `(js2-jsdoc-type                            ((,class (:background ,lambda-highlight))))
+     `(js2-jsdoc-value                           ((,class (:background ,lambda-lowlight))))
      `(js2-function-param                        ((,class (:background unspecified :foreground ,lambda-aqua))))
      `(js2-function-call                         ((,class (:background unspecified :foreground ,lambda-blue))))
      `(js2-instance-member                       ((,class (:background unspecified :foreground ,lambda-orange))))
      `(js2-private-member                        ((,class (:background unspecified :foreground ,lambda-yellow))))
      `(js2-private-function-call                 ((,class (:background unspecified :foreground ,lambda-aqua))))
      `(js2-jsdoc-html-tag-name                   ((,class (:background unspecified :foreground ,lambda-highlight))))
-     `(js2-jsdoc-html-tag-delimiter              ((,class (:background unspecified :foreground ,lambda-lowlight))))
+     `(js2-jsdoc-html-tag-delimiter              ((,class (:background ,lambda-lowlight))))
+
+;;;;;; Eglot
+     `(eglot-highlight-symbol-face          ((,class (:background lambda-lowlight :foreground ,lambda-blue))))
+     `(eglot-diagnostic-tag-deprecated      ((,class (:strike-through t :background ,lambda-lowlight))))
+     `(eglot-diagnostic-tag-unnecessary     ((,class (:underline (:color ,lambda-lowlight :style wave)))))
+     `(eglot-inlay-hint-face                ((,class (:inherit shadow :background ,lambda-lowlight))))
+     `(eglot-inlay-hint-type-face           ((,class (:foreground ,lambda-yellow :slant italic))))
+     `(eglot-inlay-hint-parameter-face      ((,class (:foreground ,lambda-aqua :weight bold))))
+
 
 ;;;;;; Git-gutter
      `(git-gutter  (,class (:modified (:foreground ,lambda-blue))))
