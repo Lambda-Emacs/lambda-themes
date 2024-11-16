@@ -444,7 +444,7 @@ It should stick out from any other faces currently displayed."
      `(js2-jsdoc-html-tag-delimiter              ((,class (:background ,lambda-lowlight))))
 
 ;;;;;; Eglot
-     `(eglot-highlight-symbol-face          ((,class (:background lambda-lowlight :foreground ,lambda-blue))))
+     `(eglot-highlight-symbol-face          ((,class (:background ,lambda-lowlight :foreground ,lambda-blue))))
      `(eglot-diagnostic-tag-deprecated      ((,class (:strike-through t :background ,lambda-lowlight))))
      `(eglot-diagnostic-tag-unnecessary     ((,class (:underline (:color ,lambda-lowlight :style wave)))))
      `(eglot-inlay-hint-face                ((,class (:inherit shadow :background ,lambda-lowlight))))
