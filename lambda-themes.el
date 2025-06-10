@@ -453,19 +453,22 @@ It should stick out from any other faces currently displayed."
 
 
 ;;;;;; Git-gutter
-     `(git-gutter  (,class (:modified (:foreground ,lambda-blue))))
-     `(git-gutter  (,class (:added    (:foreground ,lambda-green))))
-     `(git-gutter  (,class (:deleted  (:foreground ,lambda-red))))
+     `(git-gutter:unchanged ((,class (:foreground ,lambda-bg))))
+     `(git-gutter:modified  ((,class (:foreground ,lambda-blue))))
+     `(git-gutter:added     ((,class (:foreground ,lambda-green))))
+     `(git-gutter:deleted   ((,class (:foreground ,lambda-red))))
 
 ;;;;;; Git-gutter+
+     `(git-gutter+-unchanged ((,class (:foreground ,lambda-bg))))
      `(git-gutter+-modified  ((,class (:foreground ,lambda-blue))))
      `(git-gutter+-added     ((,class (:foreground ,lambda-green))))
      `(git-gutter+-deleted   ((,class (:foreground ,lambda-red))))
 
 ;;;;;; Git-gutter-fringe
-     `(git-gutter-fr  (,class (:modified  (:inherit git-gutter:modified))))
-     `(git-gutter-fr  (,class (:added     (:inherit git-gutter:added))))
-     `(git-gutter-fr  (,class (:deleted   (:inherit git-gutter:deleted))))
+     `(git-gutter-fr:unchanged ((,class (:inherit git-gutter:unchanged))))
+     `(git-gutter-fr:modified  ((,class (:inherit git-gutter:modified))))
+     `(git-gutter-fr:added     ((,class (:inherit git-gutter:added))))
+     `(git-gutter-fr:deleted   ((,class (:inherit git-gutter:deleted))))
 
 ;;;;;; Change-Log and Log-View (`vc-print-log' and `vc-print-root-log')
      `(change-log-acknowledgment ((,class :inherit shadow)))
