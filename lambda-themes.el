@@ -182,7 +182,7 @@ It should stick out from any other faces currently displayed."
         (lambda-mild        (cond ((eq variant 'dark)  "#474648") ((eq variant 'dark-faded) "#8791A7") ((eq variant 'light) "#C1C1C1") ((eq variant 'light-faded) "#C8CDD8")))
         (lambda-faint       (cond ((eq variant 'dark)  "#37373E") ((eq variant 'dark-faded) "#333a47") ((eq variant 'light) "#E3E1E0") ((eq variant 'light-faded) "#eceff1")))
         ;; accent
-        (lambda-black       (cond ((eq variant 'dark)  "#000000") ((eq variant 'dark-faded) "#000000") ((eq variant 'light) "#000000") ((eq variant 'light-faded) "#000000")))
+        (lambda-bg       (cond ((eq variant 'dark)  "#000000") ((eq variant 'dark-faded) "#000000") ((eq variant 'light) "#000000") ((eq variant 'light-faded) "#000000")))
         (lambda-white       (cond ((eq variant 'dark)  "#FFFFFF") ((eq variant 'dark-faded) "#FFFFFF") ((eq variant 'light) "#FFFFFF") ((eq variant 'light-faded) "#FFFFFF")))
         (lambda-red         (cond ((eq variant 'dark)  "#EC6A5E") ((eq variant 'dark-faded) "#bf616a") ((eq variant 'light) "#EC6A5E") ((eq variant 'light-faded) "#960d36")))
         (lambda-green       (cond ((eq variant 'dark)  "#62C554") ((eq variant 'dark-faded) "#8eb89d") ((eq variant 'light) "#005A02") ((eq variant 'light-faded) "#00796b")))
@@ -296,7 +296,7 @@ It should stick out from any other faces currently displayed."
      `(company-preview-common                      ((,class (:foreground ,lambda-highlight))))
      `(company-preview                             ((,class (:background ,lambda-blue))))
      `(company-preview-search                      ((,class (:background ,lambda-aqua))))
-     `(company-template-field                      ((,class (:foreground ,lambda-black :background ,lambda-yellow))))
+     `(company-template-field                      ((,class (:foreground ,lambda-bg :background ,lambda-yellow))))
      `(company-echo-common                         ((,class (:foreground ,lambda-red))))
 
 ;;;;;; Consult
@@ -651,8 +651,8 @@ It should stick out from any other faces currently displayed."
      `(highlight-indentation-face                ((,class (:background ,lambda-mild))))
 
 ;;;;;; Hi-lock-mode
-     `(hi-black-b                                ((,class (:foreground ,lambda-black :weight bold))))
-     `(hi-black-hb                               ((,class (:foreground ,lambda-black :weight bold :height 1.5))))
+     `(hi-black-b                                ((,class (:foreground ,lambda-bg :weight bold))))
+     `(hi-black-hb                               ((,class (:foreground ,lambda-bg :weight bold :height 1.5))))
      `(hi-blue                                   ((,class (:foreground ,lambda-faint :background ,lambda-blue))))
      `(hi-blue-b                                 ((,class (:foreground ,lambda-blue :weight bold))))
      `(hi-green                                  ((,class (:foreground ,lambda-faint :background ,lambda-green))))
@@ -1178,7 +1178,7 @@ It should stick out from any other faces currently displayed."
      `(sh-heredoc                                ((,class (:foreground ,lambda-orange))))
 
 ;;;;;; Eat (Emulate a Terminal)
-     `(eat-term-color-0                          ((,class (:foreground ,lambda-black))))
+     `(eat-term-color-0                          ((,class (:foreground ,lambda-bg))))
      `(eat-term-color-1                          ((,class (:foreground ,lambda-red))))
      `(eat-term-color-2                          ((,class (:foreground ,lambda-green))))
      `(eat-term-color-3                          ((,class (:foreground ,lambda-yellow))))
@@ -1186,7 +1186,7 @@ It should stick out from any other faces currently displayed."
      `(eat-term-color-5                          ((,class (:foreground ,lambda-purple))))
      `(eat-term-color-6                          ((,class (:foreground ,lambda-aqua))))
      `(eat-term-color-7                          ((,class (:foreground ,lambda-white))))
-     `(eat-term-color-8                          ((,class (:foreground ,lambda-black :bold t))))
+     `(eat-term-color-8                          ((,class (:foreground ,lambda-bg :bold t))))
      `(eat-term-color-9                          ((,class (:foreground ,lambda-urgent))))
      `(eat-term-color-10                         ((,class (:foreground ,lambda-crucial))))
      `(eat-term-color-11                         ((,class (:foreground ,lambda-orange))))
