@@ -65,6 +65,60 @@ See =M-x customize-group lambda-themes= for the full list of options.
 - Set use of variable pitch in headlines, etc. 
 - Set a custom color palette.
 
+* Color Palettes
+
+Lambda-themes exports the color palette for each theme variant as constants,
+allowing you to use the theme colors in your own customizations. The following
+palettes are available:
+
+- =lambda-themes-dark-palette= - Dark theme colors
+- =lambda-themes-dark-faded-palette= - Dark faded theme colors  
+- =lambda-themes-light-palette= - Light theme colors
+- =lambda-themes-light-faded-palette= - Light faded theme colors
+
+Each palette is an association list with color names mapped to hex values:
+
+#+begin_src emacs-lisp
+  ;; Example: Get the background color from the dark theme
+  (alist-get 'bg lambda-themes-dark-palette)  ; => "#141414"
+  
+  ;; Example: Use theme colors in your own face customization
+  (set-face-attribute 'some-face nil
+                      :foreground (alist-get 'focus lambda-themes-light-palette)
+                      :background (alist-get 'highlight lambda-themes-light-palette))
+  
+  ;; Example: Create a custom face using theme colors
+  (defface my-custom-face
+    `((((background dark))
+       :foreground ,(alist-get 'crucial lambda-themes-dark-palette)
+       :background ,(alist-get 'ultralight lambda-themes-dark-palette))
+      (((background light))
+       :foreground ,(alist-get 'crucial lambda-themes-light-palette)
+       :background ,(alist-get 'highlight lambda-themes-light-palette)))
+    "My custom face using lambda-themes colors.")
+#+end_src
+
+Available color keys in each palette:
+- =fg=, =bg= - Foreground and background colors
+- =ultralight=, =highlight=, =lowlight= - Background variants
+- =urgent=, =crucial=, =focus= - Accent colors
+- =default=, =salient=, =faded= - Text variants
+- =error=, =warning=, =success= - Status colors
+- And more specialized colors for UI elements
+
+
+* Recent Changes
+
+** Fixed Issues
+- *Issue #12*: Variable pitch setting now properly updates when changed. The
+  =lambda-themes-set-variable-pitch= customization variable includes a custom
+  setter that automatically reloads the active theme when its value changes,
+  ensuring that disabling variable pitch takes effect immediately.
+
+** New Features  
+- *Issue #7*: Color palettes are now exported and documented for all theme
+  variants, allowing users to access theme colors for custom face definitions
+  and other customizations.
 
 * Acknowledgments
 
