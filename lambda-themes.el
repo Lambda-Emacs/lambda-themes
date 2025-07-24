@@ -1291,7 +1291,7 @@ It should stick out from any other faces currently displayed."
      `(eat-term-color-4                          ((,class (:foreground ,lambda-blue))))
      `(eat-term-color-5                          ((,class (:foreground ,lambda-purple))))
      `(eat-term-color-6                          ((,class (:foreground ,lambda-aqua))))
-     `(eat-term-color-7                          ((,class (:foreground ,lambda-white))))
+     `(eat-term-color-7                          ((,class (:foreground ,lambda-mild))))
      `(eat-term-color-8                          ((,class (:foreground ,lambda-fg :bold t))))
      `(eat-term-color-9                          ((,class (:foreground ,lambda-urgent))))
      `(eat-term-color-10                         ((,class (:foreground ,lambda-crucial))))
@@ -1300,6 +1300,17 @@ It should stick out from any other faces currently displayed."
      `(eat-term-color-13                         ((,class (:foreground ,lambda-purple))))
      `(eat-term-color-14                         ((,class (:foreground ,lambda-aqua))))
      `(eat-term-color-15                         ((,class (:foreground ,lambda-white :bold t))))
+
+     `(eat-term-font-0                           ((,class (:foreground ,lambda-fg))))
+     `(eat-term-font-1                           ((,class (:foreground ,lambda-red))))
+     `(eat-term-font-2                           ((,class (:foreground ,lambda-green))))
+     `(eat-term-font-3                           ((,class (:foreground ,lambda-yellow))))
+     `(eat-term-font-4                           ((,class (:foreground ,lambda-blue))))
+     `(eat-term-font-5                           ((,class (:foreground ,lambda-purple))))
+     `(eat-term-font-6                           ((,class (:foreground ,lambda-aqua))))
+     `(eat-term-font-7                           ((,class (:foreground ,lambda-mild))))
+     `(eat-term-font-8                           ((,class (:foreground ,lambda-fg :bold t))))
+     `(eat-term-font-9                           ((,class (:foreground ,lambda-urgent))))
 
 ;;;;;; Eshell
      `(eshell-prompt                              ((,class (:foreground ,lambda-yellow))))
