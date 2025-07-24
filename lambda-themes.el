@@ -288,7 +288,6 @@ It should stick out from any other faces currently displayed."
         (lambda-mild        (cond ((eq variant 'dark)  "#474648") ((eq variant 'dark-faded) "#8791A7") ((eq variant 'light) "#C1C1C1") ((eq variant 'light-faded) "#C8CDD8")))
         (lambda-faint       (cond ((eq variant 'dark)  "#37373E") ((eq variant 'dark-faded) "#333a47") ((eq variant 'light) "#E3E1E0") ((eq variant 'light-faded) "#eceff1")))
         ;; accent
-        (lambda-bg       (cond ((eq variant 'dark)  "#000000") ((eq variant 'dark-faded) "#000000") ((eq variant 'light) "#000000") ((eq variant 'light-faded) "#000000")))
         (lambda-white       (cond ((eq variant 'dark)  "#FFFFFF") ((eq variant 'dark-faded) "#FFFFFF") ((eq variant 'light) "#FFFFFF") ((eq variant 'light-faded) "#FFFFFF")))
         (lambda-red         (cond ((eq variant 'dark)  "#EC6A5E") ((eq variant 'dark-faded) "#bf616a") ((eq variant 'light) "#EC6A5E") ((eq variant 'light-faded) "#960d36")))
         (lambda-green       (cond ((eq variant 'dark)  "#62C554") ((eq variant 'dark-faded) "#8eb89d") ((eq variant 'light) "#005A02") ((eq variant 'light-faded) "#00796b")))
