@@ -1284,7 +1284,7 @@ It should stick out from any other faces currently displayed."
      `(sh-heredoc                                ((,class (:foreground ,lambda-orange))))
 
 ;;;;;; Eat (Emulate a Terminal)
-     `(eat-term-color-0                          ((,class (:foreground ,lambda-bg))))
+     `(eat-term-color-0                          ((,class (:foreground ,lambda-fg))))
      `(eat-term-color-1                          ((,class (:foreground ,lambda-red))))
      `(eat-term-color-2                          ((,class (:foreground ,lambda-green))))
      `(eat-term-color-3                          ((,class (:foreground ,lambda-yellow))))
@@ -1292,7 +1292,7 @@ It should stick out from any other faces currently displayed."
      `(eat-term-color-5                          ((,class (:foreground ,lambda-purple))))
      `(eat-term-color-6                          ((,class (:foreground ,lambda-aqua))))
      `(eat-term-color-7                          ((,class (:foreground ,lambda-white))))
-     `(eat-term-color-8                          ((,class (:foreground ,lambda-bg :bold t))))
+     `(eat-term-color-8                          ((,class (:foreground ,lambda-fg :bold t))))
      `(eat-term-color-9                          ((,class (:foreground ,lambda-urgent))))
      `(eat-term-color-10                         ((,class (:foreground ,lambda-crucial))))
      `(eat-term-color-11                         ((,class (:foreground ,lambda-orange))))
