@@ -300,7 +300,7 @@ It should stick out from any other faces currently displayed."
         ;; Terminal colors - properly adapted for light/dark themes
         (lambda-term-black  (cond ((eq variant 'dark)  "#000000") ((eq variant 'dark-faded) "#1a1a1a") ((eq variant 'light) "#24292e") ((eq variant 'light-faded) "#303030")))
         (lambda-term-white  (cond ((eq variant 'dark)  "#d4d4d4") ((eq variant 'dark-faded) "#c0c0c0") ((eq variant 'light) "#586069") ((eq variant 'light-faded) "#6a737d")))
-        (lambda-term-bright-white (cond ((eq variant 'dark)  "#ffffff") ((eq variant 'dark-faded) "#e0e0e0") ((eq variant 'light) "#24292e") ((eq variant 'light-faded) "#282b35")))
+        (lambda-term-bright-white (cond ((eq variant 'dark)  "#ffffff") ((eq variant 'dark-faded) "#e0e0e0") ((eq variant 'light) "#000000") ((eq variant 'light-faded) "#000000")))
         (lambda-term-fg     (cond ((eq variant 'dark)  "#d4d4d4") ((eq variant 'dark-faded) "#c0c0c0") ((eq variant 'light) "#24292e") ((eq variant 'light-faded) "#282b35"))))
 
     (cl-loop for (cvar . val) in lambda-themes-custom-colors
