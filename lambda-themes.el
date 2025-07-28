@@ -298,8 +298,8 @@ It should stick out from any other faces currently displayed."
         (lambda-cyan        (cond ((eq variant 'dark)  "#00FFFF") ((eq variant 'dark-faded) "#66CCCC") ((eq variant 'light) "#007F7F") ((eq variant 'light-faded) "#66CCCC")))
         (lambda-purple      (cond ((eq variant 'dark)  "#9D67E6") ((eq variant 'dark-faded) "#9D67E6") ((eq variant 'light) "#833AE6") ((eq variant 'light-faded) "#833AE6")))
         ;; Terminal colors - properly adapted for light/dark themes
-        (lambda-term-black  (cond ((eq variant 'dark)  "#000000") ((eq variant 'dark-faded) "#1a1a1a") ((eq variant 'light) "#24292e") ((eq variant 'light-faded) "#303030")))
-        (lambda-term-white  (cond ((eq variant 'dark)  "#d4d4d4") ((eq variant 'dark-faded) "#c0c0c0") ((eq variant 'light) "#586069") ((eq variant 'light-faded) "#6a737d")))
+        (lambda-term-black  (cond ((eq variant 'dark)  "#000000") ((eq variant 'dark-faded) "#1a1a1a") ((eq variant 'light) "#718096") ((eq variant 'light-faded) "#4a5568")))
+        (lambda-term-white  (cond ((eq variant 'dark)  "#d4d4d4") ((eq variant 'dark-faded) "#c0c0c0") ((eq variant 'light) "#f0f0f0") ((eq variant 'light-faded) "#6a737d")))
         (lambda-term-bright-white (cond ((eq variant 'dark)  "#ffffff") ((eq variant 'dark-faded) "#e0e0e0") ((eq variant 'light) "#000000") ((eq variant 'light-faded) "#000000")))
         (lambda-term-fg     (cond ((eq variant 'dark)  "#d4d4d4") ((eq variant 'dark-faded) "#c0c0c0") ((eq variant 'light) "#24292e") ((eq variant 'light-faded) "#282b35"))))
 
@@ -1272,25 +1272,25 @@ It should stick out from any other faces currently displayed."
 
 ;;;;; Shell
 ;;;;;; Term
-     `(term-color-black                          ((,class (:foreground ,lambda-term-black))))
+     `(term-color-black                          ((,class (:foreground ,lambda-faint))))
      `(term-color-blue                           ((,class (:foreground ,lambda-blue))))
      `(term-color-cyan                           ((,class (:foreground ,lambda-aqua))))
      `(term-color-green                          ((,class (:foreground ,lambda-green))))
      `(term-color-magenta                        ((,class (:foreground ,lambda-purple))))
      `(term-color-red                            ((,class (:foreground ,lambda-red))))
-     `(term-color-white                          ((,class (:foreground ,lambda-term-white))))
+     `(term-color-white                          ((,class (:foreground ,lambda-strong))))
      `(term-color-yellow                         ((,class (:foreground ,lambda-yellow))))
-     `(term-default-fg-color                     ((,class (:foreground ,lambda-term-fg))))
+     `(term-default-fg-color                     ((,class (:foreground ,lambda-fg))))
      `(term-default-bg-color                     ((,class (:background ,lambda-bg))))
 ;;;;;; Eat (modern terminal emulator)
-     `(eat-term-color-0                          ((,class (:foreground ,lambda-term-black))))
+     `(eat-term-color-0                          ((,class (:foreground ,lambda-faint))))
      `(eat-term-color-1                          ((,class (:foreground ,lambda-red))))
      `(eat-term-color-2                          ((,class (:foreground ,lambda-green))))
      `(eat-term-color-3                          ((,class (:foreground ,lambda-yellow))))
      `(eat-term-color-4                          ((,class (:foreground ,lambda-blue))))
      `(eat-term-color-5                          ((,class (:foreground ,lambda-purple))))
      `(eat-term-color-6                          ((,class (:foreground ,lambda-aqua))))
-     `(eat-term-color-7                          ((,class (:foreground ,lambda-term-white))))
+     `(eat-term-color-7                          ((,class (:foreground ,lambda-meek))))
      `(eat-term-color-8                          ((,class (:foreground ,lambda-mild))))
      `(eat-term-color-9                          ((,class (:foreground ,lambda-red))))
      `(eat-term-color-10                         ((,class (:foreground ,lambda-green))))
@@ -1298,8 +1298,8 @@ It should stick out from any other faces currently displayed."
      `(eat-term-color-12                         ((,class (:foreground ,lambda-blue))))
      `(eat-term-color-13                         ((,class (:foreground ,lambda-purple))))
      `(eat-term-color-14                         ((,class (:foreground ,lambda-aqua))))
-     `(eat-term-color-15                         ((,class (:foreground ,lambda-term-bright-white))))
-     `(eat-term-default-fg                       ((,class (:foreground ,lambda-term-fg))))
+     `(eat-term-color-15                         ((,class (:foreground ,lambda-strong))))
+     `(eat-term-default-fg                       ((,class (:foreground ,lambda-fg))))
      `(eat-term-default-bg                       ((,class (:background ,lambda-bg))))
 
 ;;;;;; Shell script
