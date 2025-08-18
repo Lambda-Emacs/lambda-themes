@@ -1018,9 +1018,9 @@ It should stick out from any other faces currently displayed."
 
 ;;;;;; Window Divs
      ;; divide windows more attractively
-     `(window-divider                            ((,class (:background ,lambda-bg))))
-     `(window-divider-first-pixel                ((,class (:background ,lambda-bg))))
-     `(window-divider-last-pixel                 ((,class (:background ,lambda-bg))))
+     `(window-divider                            ((,class (:foreground ,lambda-bg))))
+     `(window-divider-first-pixel                ((,class (:foreground ,lambda-bg))))
+     `(window-divider-last-pixel                 ((,class (:foreground ,lambda-bg))))
      ;; divide windows better in terminal
      ;; see https://www.reddit.com/r/emacs/comments/3u0d0u/how_do_i_make_the_vertical_window_divider_more/
      ;; (when (not (display-graphic-p))
