@@ -88,7 +88,10 @@
          (set-default sym val)
          (when (and (boundp 'lambda-themes-active-theme)
                     lambda-themes-active-theme)
-           (load-theme lambda-themes-active-theme t))))
+           ;; lambda-themes-active-theme stores 'light or 'dark, not the full theme name
+           ;; Construct the proper theme name with lambda- prefix
+           (let ((theme-name (intern (format "lambda-%s" lambda-themes-active-theme))))
+             (load-theme theme-name t)))))
 
 (defcustom lambda-themes-set-vibrant nil
   "If t then use vibrant syntax coloring.variable-pitch for headings and status-line."
