@@ -1423,7 +1423,7 @@ It should stick out from any other faces currently displayed."
      `(gnus-group-mail-low         ((,class (:inherit gnus-group-mail-1 :weight normal))))
      `(gnus-group-mail-low-empty   ((,class (:inherit gnus-group-mail-1-empty))))
      `(gnus-group-news-low         ((,class (:inherit gnus-group-mail-1 :foreground ,lambda-faint))))
-     `(gnus-group-news-low-empty   ((,class (:inherit gnus-group-news-low :weight normal))))
+     `(gnus-group-news-low-empty   ((,class (:inherit gnus-group-mail-1-empty :foreground ,lambda-faint))))
      `(gnus-header-content         ((,class (:inherit message-header-other))))
      `(gnus-header-from            ((,class (:inherit message-header-other))))
      `(gnus-header-name            ((,class (:inherit message-header-name))))
